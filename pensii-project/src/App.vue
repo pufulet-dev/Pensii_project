@@ -221,10 +221,10 @@
       <h5> Sort Pension Beneficiaries </h5>
       <div>
         <label for="sortCriterion"> By: </label>
-        <select v-model="selectedSortBy" id="sortBy">
-          <option value="pension" name="sortCriterion"> Pension </option>
-          <option value="age" name="sortCriterion"> Age </option>
-          <option value="name" name="sortCriterion"> Name </option>
+        <select v-model="sortCriterion" id="sortBy">
+          <option value="pensie" name="sortCriterion"> Pensie </option>
+          <option value="idnp" name="sortCriterion"> IDNP </option>
+          <option value="nume" name="sortCriterion"> Nume </option>
         </select>
       </div>
       <div>
@@ -327,6 +327,9 @@
         }
       },
       addPerson() {
+        let pensie = this.result;
+        if (pensie == 1) pensie = "calificat";
+        if (pensie == 0) pensie = "respins";
         this.persons.push(
         {
           id: this.persons.length + 1, 
@@ -335,7 +338,7 @@
           gen: this.gen,
           idnp: this.IDNP, 
           dataNastere: this.dataNastere,
-          pensie: this.result,
+          pensie: pensie,
         });
         this.result = null;
         this.nume = null;
@@ -346,17 +349,35 @@
       },
       sortPersons() {
         let myArray = this.persons;
-        myArray = myArray.sort((a,b) => {
-          let fa = a.nume, fb = b.nume;
-          if (fa < fb) {
-            return -1
-          }
-          if (fa > fb) {
-            return 1
-          }
-          return 0
-        });
+        if (this.sortOrder == "ascending") {
+          myArray = myArray.sort((a,b) => {
+            let fa, fb;
+            if (this.sortCriterion == "pensie") {
+              fa = a.pensie; fb = b.pensie;
+            } else if (this.sortCriterion == "nume") {
+              fa = a.nume; fb = b.nume;
+            } else if (this.sortCriterion == "idnp") {
+              fa = a.idnp; fb = b.idnp;
+            }
+            if (fa < fb) return -1;
+            if (fa > fb) return 1;
+          });
+        } else {
+          myArray = myArray.sort((a,b) => {
+            let fa, fb;
+            if (this.sortCriterion == "pensie") {
+              fa = a.pensie; fb = b.pensie;
+            } else if (this.sortCriterion == "nume") {
+              fa = a.nume; fb = b.nume;
+            } else if (this.sortCriterion == "idnp") {
+              fa = a.idnp; fb = b.idnp;
+            }
+            if (fa > fb) return -1;
+            if (fa < fb) return 1;
+          });
+        }
         this.persons = myArray;
+        console.log("hei");
         console.log(this.persons);
       },
     }
