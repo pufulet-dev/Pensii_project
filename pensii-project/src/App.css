@@ -1,0 +1,208 @@
+
+  .wrapper {
+    padding-top: 0;
+    padding-left: 260px;
+    padding-right: 260px;
+    margin: 0;
+  }
+
+  .titleWrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .title1, .title2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* .generalInfoWrapper {
+    
+  } */
+
+  /* .pension-window-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 60px 40px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 40px 40px, rgba(0, 0, 0, 0.1) 0px -10px 25px, rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.15) 0px 10px 10px, rgba(0, 0, 0, 0.07) 0px -2px 3px;
+    max-width: 45%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  } */
+
+  .tableWrapper {
+    width: 100%;
+    border-block: 1px solid black;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  th, td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .sortFiltersWrapper {
+    width: 260px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-top: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .signName {
+    width: 100%;
+    text-align: center;
+    color: grey;
+    font-size: 14px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+
+
+  /* STYLE PENSION WINDOW */
+
+  .pension-window-wrapper {
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pension-window-wrapper h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .pension-window-wrapper label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .pension-window-wrapper input[type="number"],
+  .pension-window-wrapper input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .pension-window-wrapper button[type="submit"],
+  .pension-window-wrapper button.pensie-result-wrapper {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    display: block;
+    margin: auto;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .pension-window-wrapper button[type="submit"]:hover,
+  .pension-window-wrapper button.pensie-result-wrapper:hover {
+    background-color: #0056b3;
+    display: block;
+    margin: auto;
+  }
+  
+  .pension-window-wrapper .pensie-result-wrapper {
+    background-color: #28a745;
+    margin-left: auto;
+  }
+  
+  .pension-window-wrapper .pensie-result-wrapper:hover {
+    background-color: #218838;
+  }
+  
+  .pension-window-wrapper p {
+    margin-bottom: 10px;
+  }  
+
+
+  /* STYLE GENERAL INFO WINDOW */
+
+  .generalInfoWrapper {
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+    .generalInfoWrapper h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    }
+
+    .form-group {
+    margin-bottom: 15px;
+    }
+
+    .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    }
+
+    .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+
+    .form-group.flex-row {
+    display: flex;
+    align-items: center;
+    }
+
+    .form-group.flex-row label {
+    margin-right: 10px;
+    }
+
+    .form-check-label {
+    margin-left: 5px;
+    }
+
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    display: block;
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background-color: #0056b3;
+    }
+
+    h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    }
+
+    select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
