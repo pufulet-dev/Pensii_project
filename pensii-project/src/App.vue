@@ -1,6 +1,5 @@
 <script setup>
 //import artihmeticModule from './functions.wasm';
-import Vue from "vue";
 import "./App.css";
 </script>
 
